@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "numbers",
+  "info": {
+    "singularName": "number",
+    "pluralName": "numbers",
+    "displayName": "Telephones",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "employeeName": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "unit": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::unit.unit",
+      "inversedBy": "telephone"
+    },
+    "internalNumber": {
+      "type": "biginteger"
+    },
+    "externalNumber": {
+      "type": "biginteger"
+    },
+    "companyNumber": {
+      "type": "biginteger"
+    },
+    "section": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::section.section"
+    }
+  }
+}

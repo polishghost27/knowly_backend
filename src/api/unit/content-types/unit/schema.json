@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "units",
+  "info": {
+    "singularName": "unit",
+    "pluralName": "units",
+    "displayName": "Unit",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "unitName": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "unitShortcut",
+      "required": true
+    },
+    "pages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::page.page",
+      "mappedBy": "unit"
+    },
+    "unitShortcut": {
+      "type": "string",
+      "required": true
+    },
+    "telephone": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::number.number",
+      "mappedBy": "unit"
+    },
+    "sections": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::section.section",
+      "mappedBy": "unit"
+    }
+  }
+}

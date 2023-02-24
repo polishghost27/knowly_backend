@@ -1,0 +1,39 @@
+{
+    "name": "knowly-backend",
+    "private": true,
+    "version": "0.1.0",
+    "description": "A Strapi application",
+    "scripts": {
+        "develop": "strapi develop",
+        "start": "strapi start",
+        "build": "strapi build",
+        "strapi": "strapi"
+    },
+    "workspaces": [
+        "./src/plugins/strapi-plugin-ckeditor"
+    ],
+    "devDependencies": {
+        "prettier": "2.8.4"
+    },
+    "dependencies": {
+        "@ckeditor/strapi-plugin-ckeditor": "0.0.7",
+        "@strapi/plugin-i18n": "4.6.0",
+        "@strapi/plugin-users-permissions": "4.6.0",
+        "@strapi/strapi": "4.6.0",
+        "better-sqlite3": "7.4.6",
+        "strapi-plugin-meilisearch": "^0.9.1",
+        "strapi-plugin-navigation": "^2.2.4",
+        "strapi-plugin-rest-cache": "^4.2.6"
+    },
+    "author": {
+        "name": "Adam Szymański"
+    },
+    "strapi": {
+        "uuid": "c966d6eb-0a11-4c41-a8ad-33edc4e59b4b"
+    },
+    "engines": {
+        "node": ">=14.19.1 <=18.x.x",
+        "npm": ">=6.0.0"
+    },
+    "license": "MIT"
+}
