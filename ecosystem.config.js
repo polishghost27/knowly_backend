@@ -1,7 +1,7 @@
 module.exports = {
     apps: [
         {
-            name: 'knowhow_strapi_production',
+            name: 'knowly_strapi',
             script: 'npm',
             args: 'start',
             watch: true,
@@ -11,7 +11,6 @@ module.exports = {
             env_development: {
                 NODE_ENV: 'development',
             },
-            interpreter: 'node@14',
             exec_mode: 'cluster',
             instances: 'max',
         },
